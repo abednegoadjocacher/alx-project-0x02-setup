@@ -1,6 +1,4 @@
-export interface User {
-    id: number;
-    name: string;
-    email: string;
-    isActive: boolean;
+export interface CardProps{
+    title: string;
+    content: string;
 }
