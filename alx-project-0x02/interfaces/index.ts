@@ -18,3 +18,8 @@ export interface Post extends PostData {
   id: number;
   createdAt: string;
 }
+
+export interface ButtonProps {
+  styles: string;
+  title: string
+}
