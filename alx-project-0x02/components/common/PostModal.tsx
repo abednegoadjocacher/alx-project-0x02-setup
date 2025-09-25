@@ -57,7 +57,7 @@ const PostModal: React.FC<PostModalProps> = ({ isOpen, onClose, onSubmit }) => {
       <div className="bg-white rounded-lg shadow-lg w-full max-w-lg mx-4 z-10">
         {/* Header */}
         <div className="p-4 border-b flex items-center justify-between">
-          <h2 className="text-lg font-semibold">Create a Post</h2>
+          <h2 className="text-lg font-semibold text-black">Create a Post</h2>
           <button
             onClick={onClose}
             aria-label="Close"
@@ -73,12 +73,12 @@ const PostModal: React.FC<PostModalProps> = ({ isOpen, onClose, onSubmit }) => {
           {error && <div className="text-red-600 mb-2">{error}</div>}
 
           <label className="block mb-3">
-            <span className="text-sm font-medium">Title</span>
+            <span className="text-sm font-medium text-black">Title</span>
             <input
               ref={initialFocusRef}
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              className="mt-1 block w-full border rounded px-3 py-2"
+              className="mt-1 block w-full border rounded text-black px-3 py-2"
               placeholder="Enter a title"
               type="text"
               name="title"
@@ -86,11 +86,11 @@ const PostModal: React.FC<PostModalProps> = ({ isOpen, onClose, onSubmit }) => {
           </label>
 
           <label className="block mb-4">
-            <span className="text-sm font-medium">Content</span>
+            <span className="text-sm font-medium text-black">Content</span>
             <textarea
               value={content}
               onChange={(e) => setContent(e.target.value)}
-              className="mt-1 block w-full border rounded px-3 py-2 min-h-[120px]"
+              className="mt-1 block w-full text-black border rounded px-3 py-2 min-h-[120px]"
               placeholder="Write your post..."
               name="content"
             />
@@ -100,7 +100,7 @@ const PostModal: React.FC<PostModalProps> = ({ isOpen, onClose, onSubmit }) => {
             <button
               type="button"
               onClick={onClose}
-              className="px-4 py-2 bg-gray-200 rounded"
+              className="px-4 py-2 bg-red-600 text-white rounded"
             >
               Cancel
             </button>
